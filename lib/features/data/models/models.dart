@@ -9,7 +9,7 @@ class UtilisateurModel extends Utilisateur {
     super.prenom,
   });
 
-  UtilisateurModel.fromJSON(Map<String, Object> json)
+  UtilisateurModel.fromJSON(Map<String, dynamic> json)
     : super(
         authId: json["authId"]! as String,
         idUtilisateur: json["idUtilisateur"]! as int,
@@ -18,8 +18,8 @@ class UtilisateurModel extends Utilisateur {
         prenom: json["prenom"]! as String,
       );
 
-  Map<String, Object> toJSON() {
-    var ret = <String, Object>{};
+  Map<String, dynamic> toJSON() {
+    var ret = <String, dynamic>{};
     ret["authId"] = authId;
     ret["idUtilisateur"] = idUtilisateur;
     ret["email"] = email;
@@ -41,7 +41,7 @@ class EolienneModel extends Eolienne {
     super.vitesseRotation,
   });
 
-  EolienneModel.fromJSON(Map<String, Object> json)
+  EolienneModel.fromJSON(Map<String, dynamic> json)
     : super(
         idUtilisateur: json["idUtilisateur"]! as int,
         actif: json["actif"]! as bool,
@@ -55,13 +55,13 @@ class EolienneModel extends Eolienne {
         vitesseRotation: json["vitesseRotation"]! as double,
       );
 
-  Map<String, Object> toJSON() {
+  Map<String, dynamic> toJSON() {
     var nouveauTemps = 0;
     if (tempsDerniereMesure != null) {
       nouveauTemps = tempsDerniereMesure!.millisecondsSinceEpoch;
     }
 
-    return <String, Object>{
+    return <String, dynamic>{
       "idUtilisateur": idUtilisateur,
       "actif": actif,
       "hashSecurite": hashSecurite,

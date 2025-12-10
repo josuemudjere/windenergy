@@ -36,6 +36,9 @@ dependencies:
   cupertino_icons: ^1.0.8
   equatable: ^2.0.7
   mocktail: ^1.0.4
+  supabase_flutter: ^2.10.3
+  supamock:
+    git: https://github.com/ericmpapa/supamock.git
 
 dev_dependencies:
   flutter_test:
