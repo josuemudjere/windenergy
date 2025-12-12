@@ -25,7 +25,7 @@ CREATE OR REPLACE VIEW eoliennes_view as
   SELECT numero_serie,utilisateur_id,orientation,vitesse_rotation,
   puissance_genere,temp_derniere_mesure,
   hashtext(CONCAT(utilisateur_id,numero_serie)) as hash_securite,
-  (EXTRACT(EPOCH FROM (now() - temp_derniere_mesure)) > 10) AS actif
+  (EXTRACT(EPOCH FROM (now() - temp_derniere_mesure)) < 10) AS actif
   FROM public.eoliennes;
 
 DROP VIEW IF EXISTS public.eoliennes_view;

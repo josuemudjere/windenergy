@@ -25,7 +25,7 @@ class AjouterEoliennePage extends StatelessWidget {
           children: [
             SizedBox(height: 20),
             Text(
-              "Wind Energy",
+              "Nouvelle Eoliènne",
               textAlign: TextAlign.center,
               style: GoogleFonts.hammersmithOne(
                 color: couleurPrincipale,
