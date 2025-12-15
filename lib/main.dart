@@ -10,7 +10,10 @@ import 'dependency_injection.dart' as di;
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await dotenv.load(fileName: ".env");
-  await Supabase.initialize(url: dotenv.get("SUPABASE_URL"), anonKey: dotenv.get("SUPABASE_KEY"));
+  await Supabase.initialize(
+    url: dotenv.get("SUPABASE_URL"),
+    anonKey: dotenv.get("SUPABASE_KEY"),
+  );
   di.init();
   runApp(
     MaterialApp(

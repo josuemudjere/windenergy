@@ -12,9 +12,7 @@ import 'package:windenergy/ui/couleurs.dart';
 import 'package:windenergy/ui/utils.dart';
 
 class EnregistrerPage extends StatefulWidget {
-
   EnregistrerPage({super.key});
-
   @override
   State<EnregistrerPage> createState() => _EnregistrerPageState();
 }
@@ -71,9 +69,11 @@ class _EnregistrerPageState extends State<EnregistrerPage> {
       padding: EdgeInsets.fromLTRB(0, 150, 0, 0),
       child: Column(
         children: [
-          SizedBox(width: 25, height: 25, child: CircularProgressIndicator(
-            color: couleurPrincipale,
-          )),
+          SizedBox(
+            width: 25,
+            height: 25,
+            child: CircularProgressIndicator(color: couleurPrincipale),
+          ),
           SizedBox(height: 10),
           Text(
             "connexion",
